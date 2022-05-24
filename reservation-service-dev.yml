@@ -1,0 +1,19 @@
+server:
+  port: 8484
+spring:
+  cloud:
+  #   consul:
+  #     host: localhost
+  #     port: 8500
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
