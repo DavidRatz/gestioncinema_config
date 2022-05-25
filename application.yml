@@ -1,4 +1,10 @@
 spring:
+  datasource:
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
   cloud:
       consul:
         host: localhost
