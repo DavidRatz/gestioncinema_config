@@ -1,6 +1,15 @@
 server:
   port: 8484
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestioncinema_reservation
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
   cloud:
   #   consul:
   #     host: localhost
