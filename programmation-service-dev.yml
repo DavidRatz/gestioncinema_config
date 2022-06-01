@@ -10,19 +10,31 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
-  cloud:
+
+feign:
+  client:
+    config:
+      film-service:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: BASIC
+      cinema-service:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: BASIC
+  # cloud:
   #   consul:
   #     host: localhost
   #     port: 8500
-    stream:
-      binders:
-        rabbit:
-          type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: localhost
-                port: 5672
-                username: guest
-                password: guest
-                virtual-host: /
+    # stream:
+    #   binders:
+    #     rabbit:
+    #       type: rabbit
+    #       environment:
+    #         spring:
+    #           rabbitmq:
+    #             host: localhost
+    #             port: 5672
+    #             username: guest
+    #             password: guest
+    #             virtual-host: /
