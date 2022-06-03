@@ -1,14 +1,14 @@
 spring:
   cloud:
-      consul:
-        host: localhost
-        port: 8500
-        discovery:
-          service-name: ${spring.application.name}
-          instance-id: ${spring.application.name}:${random.uuid}
-          health-check-interval: 15s
-          health-check-timeout: 60s
-          health-check-critical-timeout: 5m
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${random.uuid}
+        health-check-interval: 15s
+        health-check-timeout: 60s
+        health-check-critical-timeout: 5m
 management:
   endpoints:
     web:
