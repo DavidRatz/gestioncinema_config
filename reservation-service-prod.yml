@@ -1,15 +1,8 @@
 server:
-  port: 8585
-
-application:
-  jwt:
-    secret: "m0N_Sup3R_C0d3_S3creT"
-    expires: 86400000
-    prefix: "Bearer "
-    header: "Authorization"
+  port: 8484
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/gestioncinema_user
+    url: jdbc:mysql://localhost:3306/gestioncinema_reservation
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +11,9 @@ spring:
     hibernate:
       ddl-auto: update
   cloud:
+  #   consul:
+  #     host: localhost
+  #     port: 8500
     stream:
       binders:
         rabbit:
@@ -25,7 +21,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: localhost
+                host: rabbitmq
                 port: 5672
                 username: guest
                 password: guest
