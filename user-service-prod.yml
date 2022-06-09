@@ -9,7 +9,7 @@ application:
     header: "Authorization"
 spring:
   datasource:
-    url: jdbc:mysql://dbuser:3306/gestioncinema_user
+    url: jdbc:mysql://dbuser:3312/gestioncinema_user
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver

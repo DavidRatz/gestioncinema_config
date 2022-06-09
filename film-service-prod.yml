@@ -2,7 +2,7 @@ server:
   port: 8282
 spring:
   datasource:
-    url: jdbc:mysql://dbfilm:3306/gestioncinema_film
+    url: jdbc:mysql://dbfilm:3309/gestioncinema_film
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
