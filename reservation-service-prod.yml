@@ -11,8 +11,8 @@ spring:
     hibernate:
       ddl-auto: create-drop
   cloud:
-  #   consul:
-  #     host: localhost
+    consul:
+      host: consul-server
   #     port: 8500
     stream:
       binders:

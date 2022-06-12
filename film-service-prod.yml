@@ -1,6 +1,9 @@
 server:
   port: 8282
 spring:
+  cloud:
+    consul:
+      host: consul-server
   datasource:
     url: jdbc:mysql://dbfilm:3306/gestioncinema_film
     username: root

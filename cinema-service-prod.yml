@@ -1,6 +1,9 @@
 server:
   port: 8181
 spring:
+  cloud:
+    consul:
+      host: consul-server
   datasource:
     url: jdbc:mysql://dbcinema:3306/gestioncinema_cinema
     username: root
