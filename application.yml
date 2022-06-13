@@ -5,10 +5,10 @@ spring:
       discovery:
         service-name: ${spring.application.name}
         instance-id: ${spring.application.name}:${random.uuid}
-        health-check-interval: 15s
-        health-check-timeout: 60s
+        health-check-interval: 5s
+        health-check-timeout: 10s
         health-check-critical-timeout: 10s
-        deregister_critical_service_after: 15s
+        deregister_critical_service_after: 1m
         prefer-ip-address: true
 
 management:
