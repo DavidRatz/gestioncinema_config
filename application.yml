@@ -7,10 +7,9 @@ spring:
         instance-id: ${spring.application.name}:${random.uuid}
         health-check-interval: 15s
         health-check-timeout: 60s
-        health-check-critical-timeout: 2m
+        health-check-critical-timeout: 10s
+        deregister_critical_service_after: 15s
         prefer-ip-address: true
-  zipkin:
-    baseUrl: http://zipkin:9411/
 
 management:
   endpoints:
