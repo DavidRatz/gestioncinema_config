@@ -10,6 +10,19 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+  cloud:
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
 feign:
   client:
     config:
@@ -21,19 +34,4 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: BASIC
-  # cloud:
-  #   consul:
-  #     host: localhost
-  #     port: 8500
-    # stream:
-    #   binders:
-    #     rabbit:
-    #       type: rabbit
-    #       environment:
-    #         spring:
-    #           rabbitmq:
-    #             host: localhost
-    #             port: 5672
-    #             username: guest
-    #             password: guest
-    #             virtual-host: /
+  
